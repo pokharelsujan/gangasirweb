@@ -3,106 +3,96 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Assoc. Prof. Ganga Ram Phaijoo</title>
+<title>Ganga Ram Phaijoo</title>
 <link rel="stylesheet" href="https://unpkg.com/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
 <style>
   *{margin:0;padding:0;box-sizing:border-box;}
   body{font-family:'Segoe UI',system-ui,sans-serif;background:#fff;color:#111;scroll-behavior:smooth;}
   a{color:inherit;text-decoration:none;}
-  
-  /* NAV */
   nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1.5px solid #111;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:60px;}
   .nav-logo{font-size:15px;font-weight:700;letter-spacing:.04em;}
   .nav-links{display:flex;gap:32px;}
   .nav-links a{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#555;transition:color .2s;}
   .nav-links a:hover{color:#111;}
 
-  /* HERO */
-  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:90vh;border-bottom:2px solid #111;}
+  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:88vh;border-bottom:2px solid #111;}
   .hero-left{padding:8% 6% 6%;display:flex;flex-direction:column;justify-content:center;border-right:1.5px solid #111;}
   .hero-tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#555;margin-bottom:24px;}
-  .hero-name{font-size:clamp(36px,5vw,72px);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:20px;}
+  .hero-name{font-size:clamp(32px,4.5vw,64px);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:20px;}
   .hero-name span{color:#1a56db;}
-  .hero-title{font-size:17px;color:#444;line-height:1.6;max-width:420px;margin-bottom:36px;}
+  .hero-title{font-size:16px;color:#444;line-height:1.7;max-width:420px;margin-bottom:36px;}
   .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
   .btn-primary{background:#111;color:#fff;padding:13px 28px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:2px solid #111;cursor:pointer;transition:all .2s;}
   .btn-primary:hover{background:#1a56db;border-color:#1a56db;}
   .btn-outline{background:#fff;color:#111;padding:13px 28px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:2px solid #111;cursor:pointer;transition:all .2s;}
   .btn-outline:hover{background:#f3f4f6;}
-  .hero-right{background:#f7f8fc;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
-  .hero-right::before{content:'';position:absolute;top:-80px;right:-80px;width:320px;height:320px;border-radius:50%;border:2px solid #d1d5db;}
-  .avatar-wrap{position:relative;z-index:1;}
-  .avatar{width:200px;height:200px;border-radius:50%;background:#1a56db;display:flex;align-items:center;justify-content:center;font-size:56px;font-weight:800;color:#fff;border:6px solid #111;}
-  .hero-stats{position:absolute;bottom:40px;left:0;right:0;display:flex;justify-content:center;gap:40px;}
+  .hero-right{background:#f7f8fc;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;padding:40px;}
+  .avatar{width:180px;height:180px;border-radius:50%;background:#1a56db;display:flex;align-items:center;justify-content:center;font-size:52px;font-weight:800;color:#fff;border:6px solid #111;}
+  .hero-contact{display:flex;flex-direction:column;gap:12px;width:100%;max-width:340px;}
+  .hc-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#333;}
+  .hc-item i{font-size:17px;color:#1a56db;flex-shrink:0;margin-top:2px;}
+  .hero-stats{display:flex;gap:40px;margin-top:8px;}
   .stat{text-align:center;}
-  .stat-num{font-size:28px;font-weight:800;color:#111;}
+  .stat-num{font-size:26px;font-weight:800;color:#111;}
   .stat-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#777;}
 
-  /* SECTIONS COMMON */
   section{padding:80px 8%;}
   .section-label{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#1a56db;margin-bottom:12px;}
   .section-title{font-size:clamp(26px,3.5vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:48px;}
 
-  /* ABOUT */
   .about{border-bottom:1.5px solid #e5e7eb;}
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
-  .about-bio{font-size:16px;line-height:1.8;color:#333;}
+  .about-bio{font-size:15px;line-height:1.85;color:#333;}
   .about-bio p{margin-bottom:16px;}
   .interests{margin-top:32px;}
   .interests-title{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#111;margin-bottom:16px;}
   .tags{display:flex;flex-wrap:wrap;gap:8px;}
   .tag{background:#f3f4f6;border:1.5px solid #e5e7eb;padding:6px 14px;font-size:12px;font-weight:600;letter-spacing:.04em;color:#374151;}
-  .about-details{display:flex;flex-direction:column;gap:20px;}
-  .detail-card{background:#f7f8fc;border:1.5px solid #e5e7eb;padding:20px 24px;}
+  .about-details{display:flex;flex-direction:column;gap:16px;}
+  .detail-card{background:#f7f8fc;border:1.5px solid #e5e7eb;padding:18px 22px;}
   .detail-card-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#777;margin-bottom:6px;}
-  .detail-card-value{font-size:14px;font-weight:600;color:#111;}
+  .detail-card-value{font-size:14px;font-weight:600;color:#111;line-height:1.6;}
 
-  /* PUBLICATIONS */
+  .awards{border-bottom:1.5px solid #e5e7eb;}
+  .awards-list{display:flex;flex-direction:column;gap:16px;}
+  .award-item{display:flex;align-items:flex-start;gap:16px;padding:20px 24px;border:2px solid #e5e7eb;transition:border-color .2s;}
+  .award-item:hover{border-color:#1a56db;}
+  .award-icon{font-size:22px;color:#1a56db;flex-shrink:0;margin-top:2px;}
+  .award-name{font-size:15px;font-weight:700;color:#111;}
+  .award-org{font-size:13px;color:#666;margin-top:4px;}
+
   .publications{background:#111;color:#fff;border-bottom:2px solid #111;}
   .publications .section-label{color:#60a5fa;}
   .publications .section-title{color:#fff;}
-  .pub-list{display:flex;flex-direction:column;gap:0;}
-  .pub-item{display:grid;grid-template-columns:80px 1fr auto;gap:24px;align-items:start;padding:28px 0;border-bottom:1px solid #2a2a2a;}
+  .pub-list{display:flex;flex-direction:column;}
+  .pub-item{display:grid;grid-template-columns:60px 1fr auto;gap:20px;align-items:start;padding:24px 0;border-bottom:1px solid #2a2a2a;}
   .pub-item:last-child{border-bottom:none;}
-  .pub-year{font-size:13px;font-weight:700;color:#60a5fa;padding-top:3px;}
-  .pub-title{font-size:15px;font-weight:700;color:#f9fafb;margin-bottom:6px;}
-  .pub-meta{font-size:13px;color:#9ca3af;line-height:1.5;}
-  .pub-badge{background:#1a56db;color:#fff;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;white-space:nowrap;align-self:start;margin-top:3px;}
+  .pub-num{font-size:13px;font-weight:700;color:#60a5fa;padding-top:3px;}
+  .pub-title{font-size:14px;font-weight:700;color:#f9fafb;margin-bottom:5px;line-height:1.4;}
+  .pub-meta{font-size:12px;color:#9ca3af;line-height:1.5;}
+  .pub-badge{background:#1a56db;color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;white-space:nowrap;align-self:start;margin-top:3px;}
 
-  /* TEACHING */
-  .teaching{border-bottom:1.5px solid #e5e7eb;}
-  .courses-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
-  .course-card{border:2px solid #e5e7eb;padding:28px;transition:border-color .2s;}
-  .course-card:hover{border-color:#1a56db;}
-  .course-code{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1a56db;margin-bottom:10px;}
-  .course-name{font-size:17px;font-weight:800;color:#111;margin-bottom:10px;line-height:1.2;}
-  .course-meta{font-size:13px;color:#666;line-height:1.5;}
-  .course-semester{display:inline-block;margin-top:14px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#111;padding:4px 10px;}
-
-  /* CONTACT */
   .contact{background:#f7f8fc;}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
-  .contact-info{display:flex;flex-direction:column;gap:20px;}
-  .contact-item{display:flex;align-items:flex-start;gap:14px;padding:20px;background:#fff;border:1.5px solid #e5e7eb;}
+  .contact-info{display:flex;flex-direction:column;gap:18px;}
+  .contact-item{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;background:#fff;border:1.5px solid #e5e7eb;}
   .contact-icon{font-size:20px;color:#1a56db;flex-shrink:0;margin-top:2px;}
   .contact-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#777;margin-bottom:4px;}
   .contact-value{font-size:14px;font-weight:600;color:#111;}
   .social-links{display:flex;flex-direction:column;gap:12px;margin-top:8px;}
   .social-link{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#1a56db;padding:14px 18px;border:2px solid #1a56db;transition:all .2s;}
   .social-link:hover{background:#1a56db;color:#fff;}
-
-  /* FOOTER */
   footer{background:#111;color:#888;text-align:center;padding:24px;font-size:12px;letter-spacing:.06em;}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">Assoc. Prof. Ganga Ram Phaijoo</div>
+  <div class="nav-logo">GR Phaijoo</div>
   <div class="nav-links">
     <a href="#about">About</a>
-    <a href="#publications">Research</a>
-    <a href="#teaching">Teaching</a>
+    <a href="#awards">Awards</a>
+    <a href="#publications">Publications</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -110,72 +100,95 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <p class="hero-tag">Department of Mathematics</p>
-    <h1 class="hero-name">Ganga <br><span>Ram Phaijoo</span><br>Ph.D.</h1>
-    <p class="hero-title">Associate Professor of Department of Mathematics at the Kathmandu University .Research interests 
-     include mathematical modeling, particularly in infectious disease dynamics and prey–predator systems, along with numerical methods for ordinary and partial
-     differential equations (ODEs and PDEs) and computational mathematics.</p>
+    <p class="hero-tag">Department of Mathematics, School of Science</p>
+    <h1 class="hero-name">Ganga Ram<br><span>Phaijoo</span></h1>
+    <p class="hero-title">Associate Professor of Mathematics at Kathmandu University, Dhulikhel, Nepal. Specializing in mathematical modeling of infectious disease dynamics, prey–predator systems, and computational mathematics.</p>
     <div class="hero-btns">
-      <a href="#publications" class="btn-primary">View Research</a>
+      <a href="#publications" class="btn-primary">View Publications</a>
       <a href="#contact" class="btn-outline">Get in Touch</a>
     </div>
   </div>
   <div class="hero-right">
-    <div class="avatar-wrap">
-      <div class="avatar">JC</div>
+    <div class="avatar">GRP</div>
+    <div class="hero-contact">
+      <div class="hc-item"><i class="ti ti-map-pin"></i><span>Changu Narayan Municipality - 7, Kushaltar, Bhaktapur</span></div>
+      <div class="hc-item"><i class="ti ti-phone"></i><span>9841755619</span></div>
+      <div class="hc-item"><i class="ti ti-mail"></i><span>gangaram@ku.edu.np</span></div>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">12+</div><div class="stat-label">Years</div></div>
-      <div class="stat"><div class="stat-num">80+</div><div class="stat-label">Publications</div></div>
-      <div class="stat"><div class="stat-num">2.4k</div><div class="stat-label">Citations</div></div>
+      <div class="stat"><div class="stat-num">14+</div><div class="stat-label">Publications</div></div>
+      <div class="stat"><div class="stat-num">2</div><div class="stat-label">Awards</div></div>
+      <div class="stat"><div class="stat-num">2018</div><div class="stat-label">Ph.D.</div></div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT / BIO -->
 <section class="about" id="about">
   <p class="section-label">About</p>
   <h2 class="section-title">Biography</h2>
   <div class="about-grid">
     <div>
       <div class="about-bio">
-        <p>Dr. Jonathan A. Carter is a Full Professor at the Department of Computer Science and Artificial Intelligence, University of Technology. He received his Ph.D. in Computer Science from MIT in 2012.</p>
-        <p>His research focuses on developing machine learning systems that are interpretable, fair, and robust—particularly in high-stakes domains such as healthcare and autonomous systems. He leads the <strong>Trustworthy AI Lab</strong> and has collaborated with industry partners including Google Research and DeepMind.</p>
-        <p>He has received multiple best paper awards and serves on the editorial boards of NeurIPS, ICML, and the Journal of Machine Learning Research.</p>
+        <p>An Associate Professor of Mathematics at Kathmandu University, Dhulikhel, Nepal. PhD in Mathematics was obtained from the Department of Mathematics at Kathmandu University in 2018 under the supervision of Prof. Dr. Dil Bahadur Gurung.</p>
+        <p>MPhil in Mathematics was completed from Kathmandu University in 2013, and a Master's degree in Mathematics was obtained from Tribhuvan University, Kathmandu, Nepal, in 2006.</p>
+        <p>Research interests include mathematical modeling, particularly in infectious disease dynamics and prey–predator systems, along with numerical methods for ordinary and partial differential equations (ODEs and PDEs) and computational mathematics.</p>
       </div>
       <div class="interests">
         <p class="interests-title">Research Interests</p>
         <div class="tags">
-          <span class="tag">Machine Learning</span>
-          <span class="tag">Explainable AI</span>
-          <span class="tag">Fairness &amp; Bias</span>
-          <span class="tag">Human-AI Interaction</span>
-          <span class="tag">Deep Learning</span>
-          <span class="tag">Healthcare AI</span>
-          <span class="tag">Robustness</span>
+          <span class="tag">Mathematical Modeling</span>
+          <span class="tag">Infectious Disease Dynamics</span>
+          <span class="tag">Prey–Predator Systems</span>
+          <span class="tag">ODEs &amp; PDEs</span>
+          <span class="tag">Numerical Methods</span>
+          <span class="tag">Computational Mathematics</span>
+          <span class="tag">Fractional-Order Models</span>
         </div>
       </div>
     </div>
     <div class="about-details">
       <div class="detail-card">
         <p class="detail-card-label">Position</p>
-        <p class="detail-card-value">Full Professor, Dept. of Computer Science &amp; AI</p>
+        <p class="detail-card-value">Associate Professor, Department of Mathematics, School of Science</p>
       </div>
       <div class="detail-card">
         <p class="detail-card-label">University</p>
-        <p class="detail-card-value">University of Technology, Boston</p>
+        <p class="detail-card-value">Kathmandu University, Dhulikhel, Nepal</p>
       </div>
       <div class="detail-card">
         <p class="detail-card-label">Education</p>
-        <p class="detail-card-value">Ph.D. Computer Science, MIT (2012)<br>B.Sc. Mathematics, Stanford (2007)</p>
+        <p class="detail-card-value">Ph.D. Mathematics, Kathmandu University (2018)<br>MPhil Mathematics, Kathmandu University (2013)<br>M.Sc. Mathematics, Tribhuvan University (2006)</p>
       </div>
       <div class="detail-card">
-        <p class="detail-card-label">Office</p>
-        <p class="detail-card-value">Room 412, Tech Building A</p>
+        <p class="detail-card-label">Location</p>
+        <p class="detail-card-value">Changu Narayan Municipality - 7, Kushaltar, Bhaktapur</p>
       </div>
       <div class="detail-card">
-        <p class="detail-card-label">Office Hours</p>
-        <p class="detail-card-value">Tuesday &amp; Thursday, 2:00 – 4:00 PM</p>
+        <p class="detail-card-label">Email</p>
+        <p class="detail-card-value">gangaram@ku.edu.np</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONORS & AWARDS -->
+<section class="awards" id="awards">
+  <p class="section-label">Recognition</p>
+  <h2 class="section-title">Honors and Awards</h2>
+  <div class="awards-list">
+    <div class="award-item">
+      <i class="ti ti-award award-icon"></i>
+      <div>
+        <p class="award-name">NMS Fellowship Award – 2018</p>
+        <p class="award-org">Nepal Mathematical Society</p>
+      </div>
+    </div>
+    <div class="award-item">
+      <i class="ti ti-medal award-icon"></i>
+      <div>
+        <p class="award-name">Nepal Bidhya Bhusan – KA – 2019</p>
+        <p class="award-org">Ministry of Education, Nepal</p>
       </div>
     </div>
   </div>
@@ -184,80 +197,135 @@
 <!-- PUBLICATIONS -->
 <section class="publications" id="publications">
   <p class="section-label">Research</p>
-  <h2 class="section-title">Selected Publications</h2>
+  <h2 class="section-title">Publications</h2>
   <div class="pub-list">
-    <div class="pub-item">
-      <span class="pub-year">2024</span>
-      <div>
-        <p class="pub-title">Towards Causal Fairness in Large Language Models: A Multi-Stakeholder Framework</p>
-        <p class="pub-meta">Carter, J.A., Nguyen, L., Patel, R. — <em>NeurIPS 2024</em></p>
-      </div>
-      <span class="pub-badge">NeurIPS</span>
-    </div>
-    <div class="pub-item">
-      <span class="pub-year">2023</span>
-      <div>
-        <p class="pub-title">Robust Out-of-Distribution Detection via Hierarchical Contrastive Learning</p>
-        <p class="pub-meta">Carter, J.A., Kim, S., Osei, B. — <em>ICML 2023</em></p>
-      </div>
-      <span class="pub-badge">ICML</span>
-    </div>
-    <div class="pub-item">
-      <span class="pub-year">2023</span>
-      <div>
-        <p class="pub-title">Interpretable Clinical Decision Support via Concept-Based Neural Networks</p>
-        <p class="pub-meta">Carter, J.A., Zhang, W., Moore, T. — <em>Nature Machine Intelligence</em>, vol. 5, pp. 312–325</p>
-      </div>
-      <span class="pub-badge">Journal</span>
-    </div>
-    <div class="pub-item">
-      <span class="pub-year">2022</span>
-      <div>
-        <p class="pub-title">Explainability Tradeoffs in High-Stakes AI Decision Systems</p>
-        <p class="pub-meta">Carter, J.A., Silva, M. — <em>ACM FAccT 2022</em>, pp. 88–99</p>
-      </div>
-      <span class="pub-badge">FAccT</span>
-    </div>
-    <div class="pub-item">
-      <span class="pub-year">2021</span>
-      <div>
-        <p class="pub-title">Human Trust Calibration in AI-Assisted Decision Making</p>
-        <p class="pub-meta">Carter, J.A., Lee, A., Brown, C. — <em>CHI 2021</em> — 🏆 Best Paper Award</p>
-      </div>
-      <span class="pub-badge">CHI</span>
-    </div>
-  </div>
-</section>
 
-<!-- TEACHING -->
-<section class="teaching" id="teaching">
-  <p class="section-label">Teaching</p>
-  <h2 class="section-title">Courses</h2>
-  <div class="courses-grid">
-    <div class="course-card">
-      <p class="course-code">CS 6410</p>
-      <p class="course-name">Advanced Machine Learning</p>
-      <p class="course-meta">Graduate-level. Covers deep learning architectures, generalization theory, and modern optimization methods.</p>
-      <span class="course-semester">Fall 2025</span>
+    <div class="pub-item">
+      <span class="pub-num">1</span>
+      <div>
+        <p class="pub-title">Modeling COVID-19 dynamics in Nepal: SEIQR compartmental model with quarantine.</p>
+        <p class="pub-meta">S Pokharel and GR Phaijoo (2025) — <em>Kathmandu University Journal of Science Engineering and Technology</em></p>
+      </div>
+      <span class="pub-badge">2025</span>
     </div>
-    <div class="course-card">
-      <p class="course-code">CS 4320</p>
-      <p class="course-name">Explainable &amp; Trustworthy AI</p>
-      <p class="course-meta">Upper-division. Interpretability methods, fairness metrics, and responsible AI deployment.</p>
-      <span class="course-semester">Spring 2025</span>
+
+    <div class="pub-item">
+      <span class="pub-num">2</span>
+      <div>
+        <p class="pub-title">Dengue Dynamics in Nepal: A Caputo Fractional Model with Optimal Control Strategies.</p>
+        <p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2024) — <em>Heliyon</em></p>
+      </div>
+      <span class="pub-badge">2024</span>
     </div>
-    <div class="course-card">
-      <p class="course-code">CS 3110</p>
-      <p class="course-name">Introduction to Data Science</p>
-      <p class="course-meta">Undergraduate. Statistics, data wrangling, visualization, and introductory ML using Python.</p>
-      <span class="course-semester">Fall 2025</span>
+
+    <div class="pub-item">
+      <span class="pub-num">3</span>
+      <div>
+        <p class="pub-title">A Comprehensive Study of Fractional-Order Derivative and Their Interplay with Basic Functions.</p>
+        <p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2024) — <em>Journal of Nepal Mathematical Society (JNMS)</em></p>
+      </div>
+      <span class="pub-badge">2024</span>
     </div>
-    <div class="course-card">
-      <p class="course-code">CS 6900</p>
-      <p class="course-name">Research Seminar in AI</p>
-      <p class="course-meta">Weekly paper readings and discussions on cutting-edge AI research. Open to PhD students.</p>
-      <span class="course-semester">Spring 2025</span>
+
+    <div class="pub-item">
+      <span class="pub-num">4</span>
+      <div>
+        <p class="pub-title">Effect of increasing stenosis over time on hemodynamics.</p>
+        <p class="pub-meta">P Gautam, C Pokharel, GR Phaijoo, P Kattel and J Kafle (2023) — <em>Biomath</em></p>
+      </div>
+      <span class="pub-badge">2023</span>
     </div>
+
+    <div class="pub-item">
+      <span class="pub-num">5</span>
+      <div>
+        <p class="pub-title">Analysis of Dengue Infection Transmission Dynamics in Nepal Using Fractional Order Mathematical Modeling.</p>
+        <p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2023) — <em>Chaos, Solitons &amp; Fractals: X, Elsevier</em></p>
+      </div>
+      <span class="pub-badge">2023</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">6</span>
+      <div>
+        <p class="pub-title">Mathematical Study of Effect of Temperature on Transmission Dynamics of Dengue Disease.</p>
+        <p class="pub-meta">J. Kafle, P. Bayalkoti, G.R. Phaijoo (2023) — <em>Journal of Nepal Mathematical Society</em></p>
+      </div>
+      <span class="pub-badge">2023</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">7</span>
+      <div>
+        <p class="pub-title">Vaccination effect on the dynamics of dengue disease transmission models in Nepal: A fractional derivative approach.</p>
+        <p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2023) — <em>Partial Differential Equations in Applied Mathematics, Elsevier</em></p>
+      </div>
+      <span class="pub-badge">2023</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">8</span>
+      <div>
+        <p class="pub-title">Mathematical Study of Human Movement and Temperature in the Transmission Dynamics of Dengue Disease between Two Patches.</p>
+        <p class="pub-meta">GR Phaijoo and DB Gurung (2022) — <em>Frontiers in Mathematical Modelling Research, Nova Science Publishers</em></p>
+      </div>
+      <span class="pub-badge">2022</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">9</span>
+      <div>
+        <p class="pub-title">Fractional-Order Dengue Disease Epidemic Model in Nepal.</p>
+        <p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2022) — <em>Int. J. Appl. Comput. Math</em></p>
+      </div>
+      <span class="pub-badge">2022</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">10</span>
+      <div>
+        <p class="pub-title">Sensitivity and Bifurcation Analysis of Fuzzy SEIR-SEI Dengue Disease Model.</p>
+        <p class="pub-meta">G Bhuju, GR Phaijoo and DB Gurung (2022) — <em>Journal of Mathematics</em></p>
+      </div>
+      <span class="pub-badge">2022</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">11</span>
+      <div>
+        <p class="pub-title">Fuzzy Model of Transmission Dynamics of COVID-19 in Nepal.</p>
+        <p class="pub-meta">G Bhuju, GR Phaijoo and DB Gurung (2021) — <em>Mathematical Modeling, Computational Intelligence Techniques and Renewable Energy, Springer</em></p>
+      </div>
+      <span class="pub-badge">2021</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">12</span>
+      <div>
+        <p class="pub-title">Bifurcation Analysis and Chaos Control of Discrete Prey-Predator Model Incorporating Novel Prey-Refuge Concept.</p>
+        <p class="pub-meta">PK Santra, GS Mahapatra and GR Phaijoo (2021) — <em>Computational and Mathematical Methods</em></p>
+      </div>
+      <span class="pub-badge">2021</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">13</span>
+      <div>
+        <p class="pub-title">Modeling Transmission Dynamics of COVID-19 in Nepal.</p>
+        <p class="pub-meta">G Bhuju, GR Phaijoo and DB Gurung (2020) — <em>Journal of Applied Mathematics and Physics</em></p>
+      </div>
+      <span class="pub-badge">2020</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">14</span>
+      <div>
+        <p class="pub-title">Mathematical Study of Impact of Travel Rates of Humans in the Transmission of Dengue Disease.</p>
+        <p class="pub-meta">GR Phaijoo and DB Gurung (2020) — <em>Nepal Journal of Science and Technology</em></p>
+      </div>
+      <span class="pub-badge">2020</span>
+    </div>
+
   </div>
 </section>
 
@@ -271,21 +339,28 @@
         <i class="ti ti-mail contact-icon"></i>
         <div>
           <p class="contact-label">Email</p>
-          <p class="contact-value">j.carter@university.edu</p>
+          <p class="contact-value">gangaram@ku.edu.np</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="ti ti-phone contact-icon"></i>
+        <div>
+          <p class="contact-label">Phone</p>
+          <p class="contact-value">9841755619</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="ti ti-map-pin contact-icon"></i>
+        <div>
+          <p class="contact-label">Address</p>
+          <p class="contact-value">Changu Narayan Municipality - 7, Kushaltar, Bhaktapur</p>
         </div>
       </div>
       <div class="contact-item">
         <i class="ti ti-building contact-icon"></i>
         <div>
-          <p class="contact-label">Office</p>
-          <p class="contact-value">Room 412, Tech Building A<br>University of Technology, Boston, MA</p>
-        </div>
-      </div>
-      <div class="contact-item">
-        <i class="ti ti-clock contact-icon"></i>
-        <div>
-          <p class="contact-label">Office Hours</p>
-          <p class="contact-value">Tuesday &amp; Thursday, 2:00 – 4:00 PM<br>or by appointment</p>
+          <p class="contact-label">Institution</p>
+          <p class="contact-value">Department of Mathematics, School of Science<br>Kathmandu University, Dhulikhel, Nepal</p>
         </div>
       </div>
     </div>
@@ -294,7 +369,7 @@
       <div class="social-links">
         <a href="#" class="social-link"><i class="ti ti-brand-google" style="font-size:18px;"></i> Google Scholar</a>
         <a href="#" class="social-link"><i class="ti ti-book" style="font-size:18px;"></i> ResearchGate</a>
-        <a href="#" class="social-link"><i class="ti ti-brand-linkedin" style="font-size:18px;"></i> LinkedIn</a>
+        <a href="#" class="social-link"><i class="ti ti-school" style="font-size:18px;"></i> KU Faculty Profile</a>
         <a href="#" class="social-link"><i class="ti ti-file-cv" style="font-size:18px;"></i> Download CV (PDF)</a>
       </div>
     </div>
@@ -302,7 +377,7 @@
 </section>
 
 <footer>
-  &copy; 2025 Prof. Jonathan A. Carter · University of Technology
+  &copy; 2025 Ganga Ram Phaijoo · Department of Mathematics, Kathmandu University
 </footer>
 
 </body>
