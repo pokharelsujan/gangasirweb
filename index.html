@@ -9,80 +9,129 @@
   *{margin:0;padding:0;box-sizing:border-box;}
   body{font-family:'Segoe UI',system-ui,sans-serif;background:#fff;color:#111;scroll-behavior:smooth;}
   a{color:inherit;text-decoration:none;}
-  nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1.5px solid #111;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:60px;}
-  .nav-logo{font-size:15px;font-weight:700;letter-spacing:.04em;}
-  .nav-links{display:flex;gap:32px;}
-  .nav-links a{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#555;transition:color .2s;}
-  .nav-links a:hover{color:#111;}
 
+  /* NAV */
+  nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1.5px solid #111;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:56px;}
+  .nav-logo{font-size:14px;font-weight:700;letter-spacing:.04em;}
+  .nav-links{display:flex;gap:24px;}
+  .nav-links a{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#555;transition:color .2s;}
+  .nav-links a:hover{color:#111;}
+  .nav-hamburger{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:#111;}
+  .mobile-menu{display:none;flex-direction:column;background:#fff;border-bottom:1.5px solid #111;padding:16px 5%;}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#555;padding:12px 0;border-bottom:1px solid #f0f0f0;}
+  .mobile-menu a:last-child{border-bottom:none;}
+
+  /* HERO */
   .hero{display:grid;grid-template-columns:1fr 1fr;min-height:88vh;border-bottom:2px solid #111;}
   .hero-left{padding:8% 6% 6%;display:flex;flex-direction:column;justify-content:center;border-right:1.5px solid #111;}
-  .hero-tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#555;margin-bottom:24px;}
-  .hero-name{font-size:clamp(32px,4.5vw,64px);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:20px;}
+  .hero-tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#555;margin-bottom:20px;}
+  .hero-name{font-size:clamp(28px,4vw,64px);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:18px;}
   .hero-name span{color:#1a56db;}
-  .hero-title{font-size:16px;color:#444;line-height:1.7;max-width:420px;margin-bottom:36px;}
-  .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
-  .btn-primary{background:#111;color:#fff;padding:13px 28px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:2px solid #111;cursor:pointer;transition:all .2s;}
+  .hero-title{font-size:15px;color:#444;line-height:1.7;max-width:420px;margin-bottom:32px;}
+  .hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn-primary{background:#111;color:#fff;padding:12px 24px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:2px solid #111;cursor:pointer;transition:all .2s;}
   .btn-primary:hover{background:#1a56db;border-color:#1a56db;}
-  .btn-outline{background:#fff;color:#111;padding:13px 28px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:2px solid #111;cursor:pointer;transition:all .2s;}
+  .btn-outline{background:#fff;color:#111;padding:12px 24px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:2px solid #111;cursor:pointer;transition:all .2s;}
   .btn-outline:hover{background:#f3f4f6;}
-  .hero-right{background:#f7f8fc;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;padding:40px;}
-  .avatar{width:180px;height:180px;border-radius:50%;background:#1a56db;display:flex;align-items:center;justify-content:center;font-size:52px;font-weight:800;color:#fff;border:6px solid #111;}
-  .hero-contact{display:flex;flex-direction:column;gap:12px;width:100%;max-width:340px;}
-  .hc-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#333;}
-  .hc-item i{font-size:17px;color:#1a56db;flex-shrink:0;margin-top:2px;}
-  .hero-stats{display:flex;gap:40px;margin-top:8px;}
+  .hero-right{background:#f7f8fc;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:40px 24px;}
+  .avatar{width:160px;height:160px;border-radius:50%;background:#1a56db;display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;color:#fff;border:5px solid #111;}
+  .hero-contact{display:flex;flex-direction:column;gap:10px;width:100%;}
+  .hc-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#333;}
+  .hc-item i{font-size:16px;color:#1a56db;flex-shrink:0;margin-top:2px;}
+  .hero-stats{display:flex;gap:32px;}
   .stat{text-align:center;}
-  .stat-num{font-size:26px;font-weight:800;color:#111;}
-  .stat-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#777;}
+  .stat-num{font-size:24px;font-weight:800;color:#111;}
+  .stat-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#777;}
 
-  section{padding:80px 8%;}
-  .section-label{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#1a56db;margin-bottom:12px;}
-  .section-title{font-size:clamp(26px,3.5vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:48px;}
+  /* SECTIONS */
+  section{padding:64px 8%;}
+  .section-label{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#1a56db;margin-bottom:10px;}
+  .section-title{font-size:clamp(22px,3vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:40px;}
 
+  /* ABOUT */
   .about{border-bottom:1.5px solid #e5e7eb;}
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
   .about-bio{font-size:15px;line-height:1.85;color:#333;}
-  .about-bio p{margin-bottom:16px;}
-  .interests{margin-top:32px;}
-  .interests-title{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#111;margin-bottom:16px;}
+  .about-bio p{margin-bottom:14px;}
+  .interests{margin-top:28px;}
+  .interests-title{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#111;margin-bottom:14px;}
   .tags{display:flex;flex-wrap:wrap;gap:8px;}
-  .tag{background:#f3f4f6;border:1.5px solid #e5e7eb;padding:6px 14px;font-size:12px;font-weight:600;letter-spacing:.04em;color:#374151;}
-  .about-details{display:flex;flex-direction:column;gap:16px;}
-  .detail-card{background:#f7f8fc;border:1.5px solid #e5e7eb;padding:18px 22px;}
-  .detail-card-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#777;margin-bottom:6px;}
+  .tag{background:#f3f4f6;border:1.5px solid #e5e7eb;padding:5px 12px;font-size:12px;font-weight:600;color:#374151;}
+  .about-details{display:flex;flex-direction:column;gap:14px;}
+  .detail-card{background:#f7f8fc;border:1.5px solid #e5e7eb;padding:16px 20px;}
+  .detail-card-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#777;margin-bottom:5px;}
   .detail-card-value{font-size:14px;font-weight:600;color:#111;line-height:1.6;}
 
+  /* AWARDS */
   .awards{border-bottom:1.5px solid #e5e7eb;}
-  .awards-list{display:flex;flex-direction:column;gap:16px;}
-  .award-item{display:flex;align-items:flex-start;gap:16px;padding:20px 24px;border:2px solid #e5e7eb;transition:border-color .2s;}
+  .awards-list{display:flex;flex-direction:column;gap:14px;}
+  .award-item{display:flex;align-items:flex-start;gap:16px;padding:20px 22px;border:2px solid #e5e7eb;transition:border-color .2s;}
   .award-item:hover{border-color:#1a56db;}
   .award-icon{font-size:22px;color:#1a56db;flex-shrink:0;margin-top:2px;}
   .award-name{font-size:15px;font-weight:700;color:#111;}
   .award-org{font-size:13px;color:#666;margin-top:4px;}
 
+  /* PUBLICATIONS */
   .publications{background:#111;color:#fff;border-bottom:2px solid #111;}
   .publications .section-label{color:#60a5fa;}
   .publications .section-title{color:#fff;}
   .pub-list{display:flex;flex-direction:column;}
-  .pub-item{display:grid;grid-template-columns:60px 1fr auto;gap:20px;align-items:start;padding:24px 0;border-bottom:1px solid #2a2a2a;}
+  .pub-item{display:grid;grid-template-columns:48px 1fr auto;gap:16px;align-items:start;padding:22px 0;border-bottom:1px solid #2a2a2a;}
   .pub-item:last-child{border-bottom:none;}
-  .pub-num{font-size:13px;font-weight:700;color:#60a5fa;padding-top:3px;}
+  .pub-num{font-size:13px;font-weight:700;color:#60a5fa;padding-top:2px;}
   .pub-title{font-size:14px;font-weight:700;color:#f9fafb;margin-bottom:5px;line-height:1.4;}
   .pub-meta{font-size:12px;color:#9ca3af;line-height:1.5;}
-  .pub-badge{background:#1a56db;color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;white-space:nowrap;align-self:start;margin-top:3px;}
+  .pub-badge{background:#1a56db;color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;white-space:nowrap;align-self:start;margin-top:2px;}
 
+  /* CONTACT */
   .contact{background:#f7f8fc;}
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
-  .contact-info{display:flex;flex-direction:column;gap:18px;}
-  .contact-item{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;background:#fff;border:1.5px solid #e5e7eb;}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+  .contact-info{display:flex;flex-direction:column;gap:16px;}
+  .contact-item{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border:1.5px solid #e5e7eb;}
   .contact-icon{font-size:20px;color:#1a56db;flex-shrink:0;margin-top:2px;}
   .contact-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#777;margin-bottom:4px;}
   .contact-value{font-size:14px;font-weight:600;color:#111;}
-  .social-links{display:flex;flex-direction:column;gap:12px;margin-top:8px;}
-  .social-link{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#1a56db;padding:14px 18px;border:2px solid #1a56db;transition:all .2s;}
+  .social-links{display:flex;flex-direction:column;gap:10px;margin-top:8px;}
+  .social-link{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#1a56db;padding:13px 16px;border:2px solid #1a56db;transition:all .2s;}
   .social-link:hover{background:#1a56db;color:#fff;}
-  footer{background:#111;color:#888;text-align:center;padding:24px;font-size:12px;letter-spacing:.06em;}
+
+  footer{background:#111;color:#888;text-align:center;padding:22px;font-size:12px;letter-spacing:.06em;}
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:768px){
+    .nav-links{display:none;}
+    .nav-hamburger{display:block;}
+
+    .hero{grid-template-columns:1fr;min-height:auto;}
+    .hero-left{padding:40px 6% 32px;border-right:none;border-bottom:1.5px solid #111;}
+    .hero-right{padding:32px 6%;}
+    .avatar{width:120px;height:120px;font-size:34px;}
+    .hero-stats{gap:24px;}
+
+    .about-grid{grid-template-columns:1fr;gap:32px;}
+
+    .pub-item{grid-template-columns:36px 1fr;gap:12px;}
+    .pub-badge{display:none;}
+
+    .contact-grid{grid-template-columns:1fr;gap:32px;}
+
+    section{padding:48px 6%;}
+  }
+
+  @media(max-width:480px){
+    .hero-name{font-size:32px;}
+    .hero-btns{flex-direction:column;}
+    .btn-primary,.btn-outline{text-align:center;}
+    .hero-stats{gap:16px;}
+    .stat-num{font-size:20px;}
+    .section-title{font-size:24px;}
+    .award-item{padding:16px;}
+    .pub-item{grid-template-columns:28px 1fr;gap:10px;}
+    .pub-num{font-size:12px;}
+    .pub-title{font-size:13px;}
+    .pub-meta{font-size:11px;}
+  }
 </style>
 </head>
 <body>
@@ -95,7 +144,16 @@
     <a href="#publications">Publications</a>
     <a href="#contact">Contact</a>
   </div>
+  <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Toggle menu">
+    <i class="ti ti-menu-2"></i>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="document.getElementById('mobileMenu').classList.remove('open')">About</a>
+  <a href="#awards" onclick="document.getElementById('mobileMenu').classList.remove('open')">Awards</a>
+  <a href="#publications" onclick="document.getElementById('mobileMenu').classList.remove('open')">Publications</a>
+  <a href="#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -116,14 +174,14 @@
       <div class="hc-item"><i class="ti ti-mail"></i><span>gangaram@ku.edu.np</span></div>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">14+</div><div class="stat-label">Publications</div></div>
+      <div class="stat"><div class="stat-num">14+</div><div class="stat-label">Papers</div></div>
       <div class="stat"><div class="stat-num">2</div><div class="stat-label">Awards</div></div>
       <div class="stat"><div class="stat-num">2018</div><div class="stat-label">Ph.D.</div></div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT / BIO -->
+<!-- ABOUT -->
 <section class="about" id="about">
   <p class="section-label">About</p>
   <h2 class="section-title">Biography</h2>
@@ -172,7 +230,7 @@
   </div>
 </section>
 
-<!-- HONORS & AWARDS -->
+<!-- AWARDS -->
 <section class="awards" id="awards">
   <p class="section-label">Recognition</p>
   <h2 class="section-title">Honors and Awards</h2>
@@ -199,133 +257,76 @@
   <p class="section-label">Research</p>
   <h2 class="section-title">Publications</h2>
   <div class="pub-list">
-
     <div class="pub-item">
       <span class="pub-num">1</span>
-      <div>
-        <p class="pub-title">Modeling COVID-19 dynamics in Nepal: SEIQR compartmental model with quarantine.</p>
-        <p class="pub-meta">S Pokharel and GR Phaijoo (2025) — <em>Kathmandu University Journal of Science Engineering and Technology</em></p>
-      </div>
+      <div><p class="pub-title">Modeling COVID-19 dynamics in Nepal: SEIQR compartmental model with quarantine.</p><p class="pub-meta">S Pokharel and GR Phaijoo (2025) — <em>Kathmandu University Journal of Science Engineering and Technology</em></p></div>
       <span class="pub-badge">2025</span>
     </div>
-
     <div class="pub-item">
       <span class="pub-num">2</span>
-      <div>
-        <p class="pub-title">Dengue Dynamics in Nepal: A Caputo Fractional Model with Optimal Control Strategies.</p>
-        <p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2024) — <em>Heliyon</em></p>
-      </div>
+      <div><p class="pub-title">Dengue Dynamics in Nepal: A Caputo Fractional Model with Optimal Control Strategies.</p><p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2024) — <em>Heliyon</em></p></div>
       <span class="pub-badge">2024</span>
     </div>
-
     <div class="pub-item">
       <span class="pub-num">3</span>
-      <div>
-        <p class="pub-title">A Comprehensive Study of Fractional-Order Derivative and Their Interplay with Basic Functions.</p>
-        <p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2024) — <em>Journal of Nepal Mathematical Society (JNMS)</em></p>
-      </div>
+      <div><p class="pub-title">A Comprehensive Study of Fractional-Order Derivative and Their Interplay with Basic Functions.</p><p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2024) — <em>Journal of Nepal Mathematical Society (JNMS)</em></p></div>
       <span class="pub-badge">2024</span>
     </div>
-
     <div class="pub-item">
       <span class="pub-num">4</span>
-      <div>
-        <p class="pub-title">Effect of increasing stenosis over time on hemodynamics.</p>
-        <p class="pub-meta">P Gautam, C Pokharel, GR Phaijoo, P Kattel and J Kafle (2023) — <em>Biomath</em></p>
-      </div>
+      <div><p class="pub-title">Effect of increasing stenosis over time on hemodynamics.</p><p class="pub-meta">P Gautam, C Pokharel, GR Phaijoo, P Kattel and J Kafle (2023) — <em>Biomath</em></p></div>
       <span class="pub-badge">2023</span>
     </div>
-
     <div class="pub-item">
       <span class="pub-num">5</span>
-      <div>
-        <p class="pub-title">Analysis of Dengue Infection Transmission Dynamics in Nepal Using Fractional Order Mathematical Modeling.</p>
-        <p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2023) — <em>Chaos, Solitons &amp; Fractals: X, Elsevier</em></p>
-      </div>
+      <div><p class="pub-title">Analysis of Dengue Infection Transmission Dynamics in Nepal Using Fractional Order Mathematical Modeling.</p><p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2023) — <em>Chaos, Solitons &amp; Fractals: X, Elsevier</em></p></div>
       <span class="pub-badge">2023</span>
     </div>
-
     <div class="pub-item">
       <span class="pub-num">6</span>
-      <div>
-        <p class="pub-title">Mathematical Study of Effect of Temperature on Transmission Dynamics of Dengue Disease.</p>
-        <p class="pub-meta">J. Kafle, P. Bayalkoti, G.R. Phaijoo (2023) — <em>Journal of Nepal Mathematical Society</em></p>
-      </div>
+      <div><p class="pub-title">Mathematical Study of Effect of Temperature on Transmission Dynamics of Dengue Disease.</p><p class="pub-meta">J. Kafle, P. Bayalkoti, G.R. Phaijoo (2023) — <em>Journal of Nepal Mathematical Society</em></p></div>
       <span class="pub-badge">2023</span>
     </div>
-
     <div class="pub-item">
       <span class="pub-num">7</span>
-      <div>
-        <p class="pub-title">Vaccination effect on the dynamics of dengue disease transmission models in Nepal: A fractional derivative approach.</p>
-        <p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2023) — <em>Partial Differential Equations in Applied Mathematics, Elsevier</em></p>
-      </div>
+      <div><p class="pub-title">Vaccination effect on the dynamics of dengue disease transmission models in Nepal: A fractional derivative approach.</p><p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2023) — <em>Partial Differential Equations in Applied Mathematics, Elsevier</em></p></div>
       <span class="pub-badge">2023</span>
     </div>
-
     <div class="pub-item">
       <span class="pub-num">8</span>
-      <div>
-        <p class="pub-title">Mathematical Study of Human Movement and Temperature in the Transmission Dynamics of Dengue Disease between Two Patches.</p>
-        <p class="pub-meta">GR Phaijoo and DB Gurung (2022) — <em>Frontiers in Mathematical Modelling Research, Nova Science Publishers</em></p>
-      </div>
+      <div><p class="pub-title">Mathematical Study of Human Movement and Temperature in the Transmission Dynamics of Dengue Disease between Two Patches.</p><p class="pub-meta">GR Phaijoo and DB Gurung (2022) — <em>Frontiers in Mathematical Modelling Research, Nova Science Publishers</em></p></div>
       <span class="pub-badge">2022</span>
     </div>
-
     <div class="pub-item">
       <span class="pub-num">9</span>
-      <div>
-        <p class="pub-title">Fractional-Order Dengue Disease Epidemic Model in Nepal.</p>
-        <p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2022) — <em>Int. J. Appl. Comput. Math</em></p>
-      </div>
+      <div><p class="pub-title">Fractional-Order Dengue Disease Epidemic Model in Nepal.</p><p class="pub-meta">HR Pandey, GR Phaijoo and DB Gurung (2022) — <em>Int. J. Appl. Comput. Math</em></p></div>
       <span class="pub-badge">2022</span>
     </div>
-
     <div class="pub-item">
       <span class="pub-num">10</span>
-      <div>
-        <p class="pub-title">Sensitivity and Bifurcation Analysis of Fuzzy SEIR-SEI Dengue Disease Model.</p>
-        <p class="pub-meta">G Bhuju, GR Phaijoo and DB Gurung (2022) — <em>Journal of Mathematics</em></p>
-      </div>
+      <div><p class="pub-title">Sensitivity and Bifurcation Analysis of Fuzzy SEIR-SEI Dengue Disease Model.</p><p class="pub-meta">G Bhuju, GR Phaijoo and DB Gurung (2022) — <em>Journal of Mathematics</em></p></div>
       <span class="pub-badge">2022</span>
     </div>
-
     <div class="pub-item">
       <span class="pub-num">11</span>
-      <div>
-        <p class="pub-title">Fuzzy Model of Transmission Dynamics of COVID-19 in Nepal.</p>
-        <p class="pub-meta">G Bhuju, GR Phaijoo and DB Gurung (2021) — <em>Mathematical Modeling, Computational Intelligence Techniques and Renewable Energy, Springer</em></p>
-      </div>
+      <div><p class="pub-title">Fuzzy Model of Transmission Dynamics of COVID-19 in Nepal.</p><p class="pub-meta">G Bhuju, GR Phaijoo and DB Gurung (2021) — <em>Mathematical Modeling, Computational Intelligence Techniques and Renewable Energy, Springer</em></p></div>
       <span class="pub-badge">2021</span>
     </div>
-
     <div class="pub-item">
       <span class="pub-num">12</span>
-      <div>
-        <p class="pub-title">Bifurcation Analysis and Chaos Control of Discrete Prey-Predator Model Incorporating Novel Prey-Refuge Concept.</p>
-        <p class="pub-meta">PK Santra, GS Mahapatra and GR Phaijoo (2021) — <em>Computational and Mathematical Methods</em></p>
-      </div>
+      <div><p class="pub-title">Bifurcation Analysis and Chaos Control of Discrete Prey-Predator Model Incorporating Novel Prey-Refuge Concept.</p><p class="pub-meta">PK Santra, GS Mahapatra and GR Phaijoo (2021) — <em>Computational and Mathematical Methods</em></p></div>
       <span class="pub-badge">2021</span>
     </div>
-
     <div class="pub-item">
       <span class="pub-num">13</span>
-      <div>
-        <p class="pub-title">Modeling Transmission Dynamics of COVID-19 in Nepal.</p>
-        <p class="pub-meta">G Bhuju, GR Phaijoo and DB Gurung (2020) — <em>Journal of Applied Mathematics and Physics</em></p>
-      </div>
+      <div><p class="pub-title">Modeling Transmission Dynamics of COVID-19 in Nepal.</p><p class="pub-meta">G Bhuju, GR Phaijoo and DB Gurung (2020) — <em>Journal of Applied Mathematics and Physics</em></p></div>
       <span class="pub-badge">2020</span>
     </div>
-
     <div class="pub-item">
       <span class="pub-num">14</span>
-      <div>
-        <p class="pub-title">Mathematical Study of Impact of Travel Rates of Humans in the Transmission of Dengue Disease.</p>
-        <p class="pub-meta">GR Phaijoo and DB Gurung (2020) — <em>Nepal Journal of Science and Technology</em></p>
-      </div>
+      <div><p class="pub-title">Mathematical Study of Impact of Travel Rates of Humans in the Transmission of Dengue Disease.</p><p class="pub-meta">GR Phaijoo and DB Gurung (2020) — <em>Nepal Journal of Science and Technology</em></p></div>
       <span class="pub-badge">2020</span>
     </div>
-
   </div>
 </section>
 
@@ -337,31 +338,19 @@
     <div class="contact-info">
       <div class="contact-item">
         <i class="ti ti-mail contact-icon"></i>
-        <div>
-          <p class="contact-label">Email</p>
-          <p class="contact-value">gangaram@ku.edu.np</p>
-        </div>
+        <div><p class="contact-label">Email</p><p class="contact-value">gangaram@ku.edu.np</p></div>
       </div>
       <div class="contact-item">
         <i class="ti ti-phone contact-icon"></i>
-        <div>
-          <p class="contact-label">Phone</p>
-          <p class="contact-value">9841755619</p>
-        </div>
+        <div><p class="contact-label">Phone</p><p class="contact-value">9841755619</p></div>
       </div>
       <div class="contact-item">
         <i class="ti ti-map-pin contact-icon"></i>
-        <div>
-          <p class="contact-label">Address</p>
-          <p class="contact-value">Changu Narayan Municipality - 7, Kushaltar, Bhaktapur</p>
-        </div>
+        <div><p class="contact-label">Address</p><p class="contact-value">Changu Narayan Municipality - 7, Kushaltar, Bhaktapur</p></div>
       </div>
       <div class="contact-item">
         <i class="ti ti-building contact-icon"></i>
-        <div>
-          <p class="contact-label">Institution</p>
-          <p class="contact-value">Department of Mathematics, School of Science<br>Kathmandu University, Dhulikhel, Nepal</p>
-        </div>
+        <div><p class="contact-label">Institution</p><p class="contact-value">Department of Mathematics, School of Science<br>Kathmandu University, Dhulikhel, Nepal</p></div>
       </div>
     </div>
     <div>
